@@ -25,6 +25,7 @@ header li a {
     color: #f5f6fa;
     font-weight: bold;
     text-decoration: none;
+    margin-left: 16px;
 }
 
 .container {
