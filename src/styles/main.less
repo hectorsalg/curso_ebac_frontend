@@ -1,0 +1,87 @@
+@import "maps.less";
+@import "variables.less";
+
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(max-width: 1023px)";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+    color: #colors[text];
+}
+
+body {
+    background-color: #colors[primary];
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 960px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+    @media @breakpointTablet {
+        width: 80%;
+    }
+    @media @breakpointMobile {
+        width: 70%;
+    }
+
+
+    .branding {
+        display: block;
+        margin: 0 auto 24px;
+        border-radius: 50%;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-around;
+        
+        li a {
+            .buttonPrimary();
+        }
+    }
+
+    h2 {
+        margin-bottom: 16px;
+    }
+}
+
+header {
+    margin-top: 24px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media @breakpointTablet {
+        grid-template-columns: 1fr;
+    }
+}
+
+.product-item {
+    margin-bottom: 24px;
+
+    h4 {
+        margin: 8px 0;
+    }
+
+    p {
+        margin: 24px 0;
+    }
+
+    a {
+        .buttonPrimary();
+    }
+}
