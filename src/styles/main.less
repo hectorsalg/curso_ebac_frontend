@@ -1,0 +1,61 @@
+@PrimaryColor: #92BFB1;
+@SecundaryColor: #7ba598;
+@ButtonColor: #A57A87;
+@TextColor: #333;
+@TextLightColor: #eee;
+@FontPrimary: Roboto, sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: @FontPrimary;
+    color: @TextLightColor;
+}
+
+body {
+    background-color: @PrimaryColor;
+}
+
+#bt-click {
+    background-color: @ButtonColor;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-weight: bolder;
+    cursor: pointer;
+    color: @TextLightColor;
+    margin-bottom: 16px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        background-color: darken(@ButtonColor, 10%);
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    background-color: @SecundaryColor;
+    border-radius: 24px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 740px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    padding: 24px;
+
+    h1 {
+        margin: 24px auto 24px;
+    }
+
+    p, span {
+        display: none;
+        color: @TextColor;
+    }
+}
